@@ -9,9 +9,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
    <title>AlleClick</title>
 </head>
 
@@ -51,12 +49,15 @@
          <div class="delivery-banner">
             <div class="wrapper">
                <h1>Delivery of purchases</h1>
-               <p>Order, payment and international delivery of parcels to allgro.pl in 1 minute ! </p>
+               <p>Order, payment and international delivery <br> of parcels to allgro.pl in 1 minute ! </p>
                <div class="check-url">
-                  <input type="url" placeholder="Paste a link URL from allegro.pl">
-                  <button>ORDER!</button>
+                  <form action="">
+                     <input type="url" placeholder="Paste a link URL from allegro.pl">
+                     <button>ORDER!</button>
+                  </form>
                </div>
-               <p>e.g.link : https://allegro.pl/oferta/mata-wodna-tummy-time-edukacyjna-dystrybucja-pl-8640412630</p>
+               <p class="example">e.g.link:
+                  https://allegro.pl/oferta/mata-wodna-tummy-time-edukacyjna-dystrybucja-pl-8640412630</p>
                <div class="advantage">
                   <ul>
                      <li>100% No Risk Delivery</li>
@@ -95,55 +96,62 @@
             <div class="deliver-calculator">
                <div class="deliver-calculator-images">
                   <img src="img/delivery-calculation-phone.png" alt="Calculator phone">
-                  <img src="img/box.png" alt="Box">
+                  <img class="box" src="img/box.png" alt="Box">
+                  <ul>
+                     <li>L= Length in centimeters</li>
+                     <li>W= Width in centimeters</li>
+                     <li>H= Heigth in centimeters</li>
+                  </ul>
                </div>
                <div class="deliver-calculator-calc">
-                  <h2>Shipping Coast Calculator</h2>
-                  <div class="deliver-calculator-calc-country">
-                     <div>
-                        <span>Departure country</span>
-                        <select name="Departure country" id="">
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                        </select>
+                  <form action="">
+                     <h2>Shipping Coast Calculator</h2>
+                     <div class="deliver-calculator-calc-country">
+                        <div>
+                           <span>Departure country</span>
+                           <select name="Departure country" id="">
+                              <option value="">Poland</option>
+                              <option value="">Belgium</option>
+                              <option value="">Italy</option>
+                              <option value="">Switzerland</option>
+                              <option value="">Danmark</option>
+                           </select>
+                        </div>
+                        <div>
+                           <span>Destination country</span>
+                           <select name="Destination country" id="">
+                              <option value="">Poland</option>
+                              <option value="">Belgium</option>
+                              <option value="">Italy</option>
+                              <option value="">Switzerland</option>
+                              <option value="">Danmark</option>
+                           </select>
+                        </div>
                      </div>
-                     <div>
-                        <span>Destination country</span>
-                        <select name="Destination country" id="">
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                           <option value=""></option>
-                        </select>
+                     <div class="deliver-calculator-calc-prop">
+                        <div>
+                           <label>Weight</label>
+                           <input type="text" placeholder="kg">
+                        </div>
+                        <div>
+                           <label>Length</label>
+                           <input type="text" placeholder="cm">
+                        </div>
+                        <div>
+                           <label>Width</label>
+                           <input type="text" placeholder="cm">
+                        </div>
+                        <div>
+                           <label>Height</label>
+                           <input type="text" placeholder="cm">
+                        </div>
                      </div>
-                  </div>
-                  <div class="deliver-calculator-calc-prop">
-                     <div>
-                        <span>Weight</span>
-                        <input type="text" placeholder="kg">
+                     <div class="deliver-calculator-calc-finish">
+                        <button>Calculate the coast</button>
+                        <input type="text" value="22.99">
+                        <labels>Price</labels>
                      </div>
-                     <div>
-                        <span>Length</span>
-                        <input type="text" placeholder="cm">
-                     </div>
-                     <div>
-                        <span>Width</span>
-                        <input type="text" placeholder="cm">
-                     </div>
-                     <div>
-                        <span>Height</span>
-                        <input type="text" placeholder="cm">
-                     </div>
-                  </div>
-                  <div class="deliver-calculator-calc-finish">
-                     <button>Calculate the coast</button>
-                     <input type="text">
-                     <span>Price</span>
-                  </div>
+                  </form>
                </div>
             </div>
             <div class="delivery-payment">
